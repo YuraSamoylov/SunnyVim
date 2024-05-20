@@ -5,6 +5,9 @@ let &t_EI = "\e[2 q"
 " Toggle fzf in vim 
 set path+=**
 
+" hide tilda characters on empty lines
+let &fillchars ..= ',eob: '
+
 " File types 
 filetype on
 
@@ -71,8 +74,8 @@ nmap <C-k> :tabnext<CR>
 imap <C-j> <esc>:tabprev<CR>
 imap <C-h> <esc>:tabfirst<CR>
 imap <C-l> <esc>:tablast<CR>
-nmap vs :vsplit
-nmap sp :split
+nmap vs :vsplit<space>
+nmap sp :split<space>
 
 nmap <F6> :set cursorcolumn!<CR>
 imap <F6> <esc>:set cursorcolumn!<CR>
@@ -154,10 +157,10 @@ fun! Start()
     if argc() == 0 && !exists('s:std_in')
         :-1read $HOME/.vim/v.txt
         set cursorline!
-        nmap i :set cursorline<CR>gg0cG
-        nmap a :set cursorline<CR>gg0cG
-        nmap I :set cursorline<CR>gg0cG
-        nmap A :set cursorline<CR>gg0cG
+        nmap i :set cursorline<CR>:set number<CR>gg0cG
+        nmap a :set cursorline<CR>:set number<CR>gg0cG
+        nmap I :set cursorline<CR>:set number<CR>gg0cG
+        nmap A :set cursorline<CR>:set number<CR>gg0cG
     endif
 endfun
 
