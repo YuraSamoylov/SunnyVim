@@ -155,7 +155,7 @@ imap cwl Console.WriteLine()<left>
 "Vim Enters
 fun! Start()
     if argc() == 0 && !exists('s:std_in')
-        :-1read $HOME/.vim/v.txt
+        :-1read $HOME/.vim/sunny_menu
         set cursorline!
         set number!
         set filetype=sun
@@ -166,7 +166,7 @@ endfun
 autocmd VimEnter * call Start()
 
 " Read templates map
-nmap py :-1read $HOME/.vim/templates/template.py<CR>Gddgg4jA
+nmap py :-1read $HOME/.vim/templates/template.py<CR>Gddgg
 nmap ht :-1read $HOME/.vim/templates/template.html<CR>Gddgg
 nmap cs :-1read $HOME/.vim/templates/template.css<CR>Gddgg
 nmap cpp :-1read $HOME/.vim/templates/template.cpp<CR>Gddgg
