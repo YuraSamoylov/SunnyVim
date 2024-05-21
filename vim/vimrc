@@ -59,11 +59,12 @@ nmap <C-q> :wq<CR>
 imap <C-q> <esc>:wq<CR>
 nmap <C-e> :q!<CR>
 nmap <C-e> :q!<CR>
+nmap q :q<CR>
 map <space> <C-f>
 
 nmap tn :tabnew<space>
 nmap tj :tabnext<CR>
-nmap tj :tabprev<CR>
+nmap tk :tabprev<CR>
 nmap th :tabfirst<CR>
 nmap tl :tablast<CR>
 nmap <C-k> :tabnext<CR>
@@ -91,7 +92,7 @@ imap ( ()<left>
 imap < <><left>
 imap { {}<left>
 imap [ []<left>
-nnoremap "" viw<esc>a"<esc>bi"<esc>lel
+nmap "" viw<esc>a"<esc>bi"<esc>lel
 
 " Auto vim
 autocmd! bufwritepost $MYVIMRC source $MYVIMRC
@@ -143,7 +144,7 @@ set omnifunc=syntaxcomplete
 colorscheme gruvbox
 
 " My autocomplete
-imap ret return
+imap ret return<space>
 imap _nm if<space>__name__<space>==<space>"__main__":<CR>main()
 imap cwl Console.WriteLine()<left>
 
@@ -151,7 +152,7 @@ imap cwl Console.WriteLine()<left>
 
 
 
-
+" To see definition in python or bash type K(shift + k) in normal mode.
 "Vim Enters
 fun! Start()
     if argc() == 0 && !exists('s:std_in')

@@ -37,3 +37,53 @@ Finally, you can download and extract SunnyVim:
     `cp SunnyVim/vim/* ~/.vim`
 
 Enjoy!
+
+## Usage
+
+SunnyVim support mouse, so you can move or change splits sizes or do something else using your mouse. Also it has autocompletion for all types of brackets.
+
+### Basic Keymaps
+
+SunnyVim supports standart vim keymappings. But also it keep some other maps:
+
+- Type `jj`, `jk`, `jh` in **insert** mode to *esc*.
+- Type `mv` in **normal** mode to *make view*.
+- Type `lv` in **normal** mode to *load view*.
+- Type `Ctrl-a` to *make replace* in **all modes**.
+- Type `Ctrl-s` to *save* file if it has name. You can use this in **insert** and **normal** modes.
+- Type `Ctrl-q` to *save and quit* file if it has name. You can use this in **insert** and **normal** modes.
+- Type `Ctrl-e` to *quit without saving* file if it has name. You can use this in **normal** mode.
+- Type `q` to *quit without saving* file if it has name. You can use this in **normal** mode.
+
+### Tabs and Splits
+
+- Type `tn` in **normal** mode to *create a new tab*.
+- Type `tj`, `tk`, `th`, `tl` in **normal** mode to *move between tabs*.
+- Also type `Ctrl-k`, `Ctrl-j`, `Ctrl-h`, `Ctrl-l` in **normal** and **insert** modes to *move between tabs*.
+- Type `vs` in **normal** mode to *create a vertical split*.
+- Type `sp` in **normal** mode to *create a horizontal split*.
+- To *move between splits* use your mouse. 
+
+### Others
+
+All next maps are in **normal** mode.
+
+- Press `F1` to *open file manager* and `F2` *to close it*
+- Press `F3` to *open tagbar of your code*. Repeat *to close*.
+- Press `F4` to *open fzf file explorer*. `Ctrl-q` *to close*.
+- Type `space-n` to *find your file in file manager*.
+- Type `Ctrl-c` to *comment line*. In **visual** mode it *comments selection*.
+- Press `F5` to *spell* if you have a language pack. Also avaliable in **insert** mode.
+- Press `F6` to *hide or show* cursor column. Also avaliable in **insert** mode.
+- Press `F8` to *hide or show* relative numbers. Also avaliable in **insert** mode.
+- Press `F9` to *hide or show* absolute numbers. Also avaliable in **insert** mode.
+- Type `py` to activate the python template.
+- Type `cpp` to activate the c++ template.
+- Type `cl` to activate the c template.
+- Type `cm` to activate the c# template.
+- Type `ht` to activate the html template.
+- Type `cs` to activate the css template.
+
+
+
+I hope, you will like SunnyVim! 
