@@ -85,5 +85,6 @@ All next maps are in **normal** mode.
 - Type `cs` to activate the css template.
 
 
+![SunnyVim working with python](img/3.png)
 
 I hope, you will like SunnyVim! 
