@@ -157,10 +157,9 @@ fun! Start()
     if argc() == 0 && !exists('s:std_in')
         :-1read $HOME/.vim/v.txt
         set cursorline!
-        nmap i :set cursorline<CR>:set number<CR>gg0cG
-        nmap a :set cursorline<CR>:set number<CR>gg0cG
-        nmap I :set cursorline<CR>:set number<CR>gg0cG
-        nmap A :set cursorline<CR>:set number<CR>gg0cG
+        set number!
+        set filetype=sun
+        nmap n :set cursorline<CR>:set number<CR>gg0cG
     endif
 endfun
 
@@ -173,3 +172,8 @@ nmap cs :-1read $HOME/.vim/templates/template.css<CR>Gddgg
 nmap cpp :-1read $HOME/.vim/templates/template.cpp<CR>Gddgg
 nmap cl :-1read $HOME/.vim/templates/template.c<CR>Gddgg
 nmap cm :-1read $HOME/.vim/templates/template.cs<CR>Gddgg
+
+" Highlighting
+highlight txtSunny ctermfg=yellow
+highlight txtCtrle ctermfg=red
+highlight txtCtrls ctermfg=red

@@ -7,23 +7,24 @@
 
 
 
+
                                                             ███████ ██    ██ ███    ██ ███    ██  ██   ██  
                                                             ██      ██    ██ ████   ██ ████   ██   ██ ██ 
                                                             ███████ ██    ██ ██ ██  ██ ██ ██  ██    ██ 
                                                                  ██ ██    ██ ██  ██ ██ ██  ██ ██   ██
                                                             ███████  ██████  ██   ████ ██   ████  ██   
                                                              
-                                                                   ██    ██ ██ ███    ███
-                                                                   ██    ██ ██ ████  ████
-                                                                   ██    ██ ██ ██ ████ ██
-                                                                    ██  ██  ██ ██  ██  ██
-                                                                     ████   ██ ██      ██
+                                                                     ██    ██ ██ ███    ███
+                                                                     ██    ██ ██ ████  ████
+                                                                     ██    ██ ██ ██ ████ ██
+                                                                      ██  ██  ██ ██  ██  ██
+                                                                       ████   ██ ██      ██
 
 
-                                                                    Welcome to SunnyVim!
+                                                                      Welcome to SunnyVim!
                                                                 
-                                                                Use Ctrl-e to quit without saving
-                                                                Use Ctrl-s to save file
-                                                                Type i to start writing
+                                                                  Use Ctrl-e to quit without saving
+                                                                  Use Ctrl-s to save file
+                                                                  Type n to start new file
 
-                                                                    GOOD LUCK!
+                                                                        GOOD LUCK!
