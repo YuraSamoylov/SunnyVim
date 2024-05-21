@@ -34,6 +34,6 @@ Also, for correctly working of autocompletion, check this website: [youcompletem
 
 Finally, you can download and extract SunnyVim:
     `git clone https://github.com/YuraSamoylov/SunnyVim.git`
-    `cp SunnyVim/vim/* ~/vim`
+    `cp SunnyVim/vim/* ~/.vim`
 
 Enjoy!
