@@ -90,6 +90,7 @@ imap <F9> <esc>:set number!<CR>
 
 imap ( ()<left>
 imap < <><left>
+imap << <<>><left><left><delete><delete><delete>
 imap { {}<left>
 imap [ []<left>
 nmap "" viw<esc>a"<esc>bi"<esc>lel
