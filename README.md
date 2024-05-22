@@ -68,7 +68,7 @@ SunnyVim supports standart vim keymappings. But also it keep some other maps:
 
 All next maps are in **normal** mode.
 
-- Press `F1` to *open file manager* and `F2` *to close it*
+- Press `F1` to *open/close file manager* and `F2` *to find your file in it*
 - Press `F3` to *open tagbar of your code*. Repeat *to close*.
 - Press `F4` to *open fzf file explorer*. `Ctrl-q` *to close*.
 - Type `space-n` to *find your file in file manager*.

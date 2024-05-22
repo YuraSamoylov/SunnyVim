@@ -108,6 +108,9 @@ augroup END
 " Plugins
 call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox'
+    Plug 'ghifarit53/tokyonight-vim'
+    Plug 'tomasiser/vim-code-dark'
+    Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -126,15 +129,12 @@ filetype plugin indent on
 
 nmap <C-c> gcc
 vmap <C-c> gc
-nmap <F1> :NERDTree<CR>
-nmap <F2> :NERDTreeToggle<CR>
-nmap <space>n :NERDTreeFind<CR>
+nmap <F2> :NERDTreeFind<CR>
+nmap <F1> :NERDTreeToggle<CR>
 nmap <F4> :Files<CR>
 nmap <F3> :TagbarToggle<CR>
 
 
-let g:indentLine_color_term = 239
-let g:indentLine_bgcolor_term = 202
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
