@@ -1,6 +1,3 @@
-//Program name.
-
-//includes.
 #include <iostream>
 #include <string>
 

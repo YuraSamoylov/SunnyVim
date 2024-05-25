@@ -1,181 +1,19 @@
-set preserveindent
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
+" Source file with plugins
+source $HOME/.vim/config/plugins.vim
 
-" Toggle fzf in vim 
-set path+=**
+" Source file with settings
+source $HOME/.vim/config/settings.vim
 
-" hide tilda characters on empty lines
-let &fillchars ..= ',eob: '
+" Source file with mappings
+source $HOME/.vim/config/mappings.vim
 
-" File types 
-filetype on
+" Source file with highlighting
+source $HOME/.vim/config/highlights.vim
 
-" Base settings
-set mouse=a
-set noswapfile
-set exrc
-set secure
-set nocompatible
-set noshiftround
-set modelines=0
-set hlsearch
-set mps+=<:>
-set mps+=":"
-set mps+=':'
-set breakindent
-set linebreak
-set wildmenu
-set re=0
-set guicursor=
-set mousemodel=popup
-set showcmd
-set history=1024
-set undolevels=2048
-set scrolloff=10
-set wildmode=list:longest
-set wrap
-set incsearch
-set ignorecase
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4 expandtab
-set termguicolors
-set cursorline
-set number
-syntax on
+" To see definition in python or bash type K(shift + k) under cursor in normal mode.
 
+" Source file with colorscheme
+source $HOME/.vim/config/colorscheme.vim
 
-" Shortcuts
-imap jj <esc>
-imap jk <esc>
-imap jh <esc>
-nmap mv :mkview<CR>
-nmap lv :loadview<CR>
-
-nmap <C-s> :w<CR>
-imap <C-s> <esc>:w<CR>
-nmap <C-q> :wq<CR>
-imap <C-q> <esc>:wq<CR>
-nmap <C-e> :q!<CR>
-nmap <C-e> :q!<CR>
-nmap q :q<CR>
-map <space> <C-f>
-
-nmap tn :tabnew<space>
-nmap tj :tabnext<CR>
-nmap tk :tabprev<CR>
-nmap th :tabfirst<CR>
-nmap tl :tablast<CR>
-nmap <C-k> :tabnext<CR>
-nmap <C-j> :tabprev<CR>
-nmap <C-h> :tabfirst<CR>
-nmap <C-l> :tablast<CR>
-nmap <C-k> :tabnext<CR>
-imap <C-j> <esc>:tabprev<CR>
-imap <C-h> <esc>:tabfirst<CR>
-imap <C-l> <esc>:tablast<CR>
-nmap vs :vsplit<space>
-nmap sp :split<space>
-
-nmap <F6> :set cursorcolumn!<CR>
-imap <F6> <esc>:set cursorcolumn!<CR>
-nmap <F5> :setlocal spell! spelllang=ru_ru,en_us<CR>
-imap <F5> <esc>:setlocal spell! spelllang=ru_ru,en_us<CR>
-highlight ColorColumn ctermbg=darkgray
-nmap <F8> :set relativenumber!<CR>
-imap <F8> <esc>:set relativenumber!<CR>
-nmap <F9> :set number!<CR>
-imap <F9> <esc>:set number!<CR>
-
-imap ( ()<left>
-imap < <><left>
-imap << <<>><left><left><delete><delete><delete>
-imap { {}<left>
-imap [ []<left>
-nmap "" viw<esc>a"<esc>bi"<esc>lel
-
-" Auto vim
-autocmd! bufwritepost $MYVIMRC source $MYVIMRC
-autocmd CursorMoved * silent! exe printf("match Search /\\<%s\\>/", expand(''))
-augroup vimrc_autocmds
-    autocmd!
-    autocmd FileType python set textwidth=79
-    autocmd FileType python set cc=80
-    " autocmd FileType python set complete+=/home/.vim/complete/python.vim
-augroup END
-
-" Plugins
-call plug#begin('~/.vim/plugged')
-    Plug 'morhetz/gruvbox'
-    Plug 'ghifarit53/tokyonight-vim'
-    Plug 'tomasiser/vim-code-dark'
-    Plug 'dracula/vim', { 'as': 'dracula' }
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'ap/vim-css-color'
-    Plug 'tomtom/tcomment_vim'
-    Plug 'xuyuanp/nerdtree-git-plugin'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'jistr/vim-nerdtree-tabs'
-    Plug 'scrooloose/nerdtree'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'preservim/tagbar'
-    Plug 'valloric/youcompleteme'
-call plug#end()
-filetype plugin indent on
-
-nmap <C-c> gcc
-vmap <C-c> gc
-nmap <F2> :NERDTreeFind<CR>
-nmap <F1> :NERDTreeToggle<CR>
-nmap <F4> :Files<CR>
-nmap <F3> :TagbarToggle<CR>
-
-
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_theme = 'gruvbox'
-
-nmap vrc :vsplit ~/.vim/vimrc<CR>
-set omnifunc=syntaxcomplete
-colorscheme gruvbox
-
-" My autocomplete
-imap ret return<space>
-imap _nm if<space>__name__<space>==<space>"__main__":<CR>main()
-imap cwl Console.WriteLine()<left>
-
-
-
-
-
-" To see definition in python or bash type K(shift + k) in normal mode.
-"Vim Enters
-fun! Start()
-    if argc() == 0 && !exists('s:std_in')
-        :-1read $HOME/.vim/sunny_menu
-        set cursorline!
-        set number!
-        set filetype=sun
-        nmap n :set cursorline<CR>:set number<CR>gg0cG
-    endif
-endfun
-
-autocmd VimEnter * call Start()
-
-" Read templates map
-nmap py :-1read $HOME/.vim/templates/template.py<CR>Gddgg
-nmap ht :-1read $HOME/.vim/templates/template.html<CR>Gddgg
-nmap cs :-1read $HOME/.vim/templates/template.css<CR>Gddgg
-nmap cpp :-1read $HOME/.vim/templates/template.cpp<CR>Gddgg
-nmap cl :-1read $HOME/.vim/templates/template.c<CR>Gddgg
-nmap cm :-1read $HOME/.vim/templates/template.cs<CR>Gddgg
-
-" Highlighting
-highlight txtSunny ctermfg=yellow
-highlight txtCtrle ctermfg=red
-highlight txtCtrls ctermfg=red
+" Source file with autocommands
+source $HOME/.vim/config/autocommands.vim
